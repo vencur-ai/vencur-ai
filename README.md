@@ -1,5 +1,7 @@
 <img src="assets/banner.png" alt="Vencur: RL environments for operations work" width="100%">
 
+*Replicating real work to train the AI economy.*
+
 **Vencur builds reinforcement-learning environments for operations work.** Each one is a working replica of the business software an agent uses on the job, filled with tasks from a real workflow and scored by a deterministic verifier that checks the final state in code. No LLM judge.
 
 Computer-use agents work in the browser. Tool-use agents call the same functions over HTTP or MCP. Both change one shared workspace, and the same verifier scores both.
@@ -27,7 +29,7 @@ Every sample runs locally in minutes and ships the verifier with its own referen
 | FullCare | 14 requests, two attempts each | 17 of 28 attempts solved |
 | API edition, hard and expert tier | blind run, one attempt each | 0 of 13 fully solved, mean score 0.86 |
 
-Where it fails: shifts left open although a qualified person was free, swap requests mishandled, colleagues not told about a changed shift, rotas a few percent dearer than needed, follow-up work skipped (a pressure-relief mattress, the pharmacy not told about a changed medication) and hospital-transfer sheets left incomplete. Scores are dense, with hard gates first and weighted layers after, and `passed` is the strict binary reward. A run with several models follows in November 2026.
+Where it fails: shifts left open although a qualified person was free, swap requests mishandled, colleagues not told about a changed shift, rotas a few percent dearer than needed, follow-up work skipped (a pressure-relief mattress, the pharmacy not told about a changed medication) and hospital-transfer sheets left incomplete. Scores are dense, with hard gates first and weighted layers after, and `passed` is the strict binary reward. Since November 2026 there are also hard and expert tiers with mid-task changes, information that only arrives on request, and duties nobody mentions in the request. We share calibration across models, with several attempts per request, under NDA.
 
 ## Proven against reward hacking before release
 
@@ -41,7 +43,7 @@ Workforce references come from a CP-SAT solver (278 of the 301 evaluation refere
 
 ## Built with practitioners
 
-Care standards and staffing rules were set or confirmed by a practising head of nursing in long-term residential care (35 years in nursing, 17 as head of nursing). All homes, residents, staff and records are fictional.
+Care standards and staffing rules were designed and reviewed, in several rounds, with a practising head of nursing in long-term residential care (35 years in nursing, 17 as head of nursing); a signed review statement is available under NDA. Statutory limits follow the UK Working Time Regulations and the German Arbeitszeitgesetz as written in each edition. All homes, residents, staff and records are fictional.
 
 ## Formats
 
@@ -51,6 +53,6 @@ Docker (offline) · Harbor · HUD (computer use and MCP) · OpenEnv · verifiers
 
 - **Evaluation sets:** fresh requests from new seed blocks that never appear in a public sample. The references stay with us, and your exported workspaces are scored by the same verifier.
 - **Training sets:** references sealed into a scoring image, so the score works as a reward. Exclusive on request.
-- **An environment for your workflow:** a written spec and a fixed price within 24 hours. FullCare went from written spec to 300 verified requests in 3 days.
+- **An environment for your workflow:** a written spec and a fixed price within 24 hours.
 
 **[getvencur.com](https://getvencur.com)** · **[info@getvencur.com](mailto:info@getvencur.com)** · South Tyrol, Italy
